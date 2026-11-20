@@ -1,0 +1,28 @@
+# ---- Web / API ----
+fastapi
+uvicorn[standard]
+
+# ---- Database ----
+supabase
+psycopg2-binary
+pgvector                 # register_vector() for pgvector queries
+
+# ---- LLM providers (swap via .env) ----
+google-genai             # Gemini 2.5 Flash (primary)
+groq                     # Llama 3.3 70B (fallback + fast path)
+
+# ---- Retrieval (local, free) ----
+sentence-transformers    # bge-small embeddings + bge-reranker cross-encoder
+
+# ---- SQL agent ----
+sqlglot                  # AST validation of generated SQL
+
+# ---- Parquet / profile analytics ----
+duckdb
+pyarrow
+pandas
+
+# ---- Config / models ----
+pydantic
+pydantic-settings
+python-dotenv
